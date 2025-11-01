@@ -25,11 +25,17 @@ cd go2_ws/docker
 ```bash
 apt-get update
 apt-get install -y tmux
+
+# run those commands for opening new terminal while running the container
+tmux new -s s1
+tmux new -s s2
+
+# open an active session (where s1 and s2 are the sessions names)
+tmux a -t s1
 ```
 
 5. Inside the Docker container, source the ROS2 and workspace setup files:
 ```bash
-tmux new -s s1
 cd workspace/src
 colcon build
 source /opt/ros/humble/setup.bash
@@ -43,7 +49,6 @@ ros2 launch go2_config gazebo.launch.py
 
 7. In a new tmux session inside the Docker container, launch RViz:
 ```bash
-tmux new -s s2
 cd workspace/src
 colcon build
 source workspace/src/install/setup.bash
