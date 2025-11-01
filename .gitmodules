@@ -1,0 +1,3 @@
+[submodule "go2_ws/src/unitree-go2-ros2"]
+	path = go2_ws/src/unitree-go2-ros2
+	url = https://github.com/Relo02/unitree-go2-ros2.git
