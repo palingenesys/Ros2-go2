@@ -30,10 +30,10 @@ apt-get install -y tmux
 5. Inside the Docker container, source the ROS2 and workspace setup files:
 ```bash
 tmux new -s s1
-cd ~/go2_ws/src
+cd workspace/src
 colcon build
 source /opt/ros/humble/setup.bash
-source ~/go2_ws/install/setup.bash
+source workspace/src/install/setup.bash
 ```
 
 6. Launch the Gazebo simulation with the Go2 robot:
@@ -44,7 +44,8 @@ ros2 launch go2_bringup go2_gazebo.launch.py
 7. In a new tmux session inside the Docker container, launch RViz:
 ```bash
 tmux new -s s2
+cd workspace/src
 colcon build
-source ~/go2_ws/install/setup.bash
+source workspace/src/install/setup.bash
 ros2 launch go2_bringup go2_rviz.launch.py
 ```
