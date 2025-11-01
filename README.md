@@ -38,7 +38,7 @@ source workspace/src/install/setup.bash
 
 6. Launch the Gazebo simulation with the Go2 robot:
 ```bash
-ros2 launch go2_bringup go2_gazebo.launch.py
+ros2 launch go2_config gazebo.launch.py
 ```
 
 7. In a new tmux session inside the Docker container, launch RViz:
@@ -47,5 +47,5 @@ tmux new -s s2
 cd workspace/src
 colcon build
 source workspace/src/install/setup.bash
-ros2 launch go2_bringup go2_rviz.launch.py
+ros2 launch go2_config gazebo.launch.py rviz:=true
 ```
