@@ -47,7 +47,7 @@ source workspace/src/install/setup.bash
 ros2 launch go2_config gazebo.launch.py
 ```
 
-7. In a new tmux session inside the Docker container, launch RViz:
+7. Or if you want to launch also Rviz, in a new tmux session inside the Docker container, launch the following node:
 ```bash
 cd workspace/src
 colcon build
