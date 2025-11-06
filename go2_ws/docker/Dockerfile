@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-humble-velodyne \
     ros-humble-velodyne-gazebo-plugins \
     ros-humble-velodyne-description \
-    curl unzip && \
+    curl unzip tmux && \
     rm -rf /var/lib/apt/lists/*
 
 # Setup ROS environment
